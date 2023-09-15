@@ -26,18 +26,18 @@ server.list_fields = ({ object }) => {
   return {
     fields: [
       {
-        field_api_name: "email",
-        label: "Email",
+        field_api_name: "id",
+        label: "ID",
         identifier: true,
-        createable: true,
-        updateable: true,
+        createable: false,
+        updateable: false,
         type: "string",
         required: true,
         array: false,
       },
       {
-        field_api_name: "name",
-        label: "Name",
+        field_api_name: "firstName",
+        label: "First Name",
         identifier: false,
         createable: true,
         updateable: true,
@@ -45,9 +45,80 @@ server.list_fields = ({ object }) => {
         required: true,
         array: false,
       },
+      {
+        field_api_name: "lastName",
+        label: "Last Name",
+        identifier: false,
+        createable: true,
+        updateable: true,
+        type: "string",
+        required: true,
+        array: false,
+      },
+      {
+        field_api_name: "contactEmails",
+        label: "Contact Emails",
+        identifier: false,
+        createable: true,
+        updateable: true,
+        type: "string",
+        required: false,
+        array: true, // Assuming it's an array of strings
+      },
+      {
+        field_api_name: "contactPhones",
+        label: "Contact Phones",
+        identifier: false,
+        createable: true,
+        updateable: true,
+        type: "string",
+        required: false,
+        array: true, // Assuming it's an array of strings
+      },
+      {
+        field_api_name: "vehicleId",
+        label: "Vehicle ID",
+        identifier: false,
+        createable: true,
+        updateable: true,
+        type: "string",
+        required: false,
+        array: false,
+      },
+      {
+        field_api_name: "preferredContactMethod",
+        label: "Preferred Contact Method",
+        identifier: false,
+        createable: true,
+        updateable: true,
+        type: "string",
+        required: false,
+        array: false,
+      },
+      {
+        field_api_name: "referralSource",
+        label: "Referral Source",
+        identifier: false,
+        createable: true,
+        updateable: true,
+        type: "string",
+        required: false,
+        array: false,
+      },
+      {
+        field_api_name: "zip",
+        label: "ZIP",
+        identifier: false,
+        createable: true,
+        updateable: true,
+        type: "string",
+        required: false,
+        array: false,
+      },
     ],
   };
 };
+
 
 server.get_sync_speed = () => {
   console.log("get sync speed");
